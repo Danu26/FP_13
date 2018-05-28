@@ -3,13 +3,6 @@
 /*************************
 *******Header******
 **************************/
-.logo{
-  height: 50px;
-  width: 80px;
-  background-color: blue;
-  margin-right: 20px;
-}
-
 .navbar {
   background: red;
   font-family: arial black;
@@ -20,26 +13,49 @@
   color: black;
 }
 /*********Search*****************/
-.boxsearch{
-  width: 182px;
-  background: skyblue;
-  font-size: 17px;
-  border: none;
-  padding-top: 10px;
+.srch{
   position: absolute;
-  float: left; 
+  background-color: #fff;
+  margin-left: 60px;
+  height: 30px;
+  width: 30px;
+  margin-top: 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  
+}
+.boxsearch{
+  position: absolute;
+  margin-left: 90px;
+  width: 150px;
+  height: 30px;
+  margin-top: 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border : none;
+  font-family: arial;
 }
 .pcari{
-  padding-left: 182px;
+  width: 30px;
+  height: 30px;
 }
 .btncari{
-   height: 30px;
+  height: 30px;
   width: 30px;
 }
 .icari{
   height: 20px;
   width: 20px;
+  margin-left: -2px;
 }
+.logo{
+  height: 40px;
+  width: 40px;
+  background-color: transparent;
+  margin-top: -10px;
+  margin-left: 100px;
+}
+
 /*************************
 *******Homepage******
 **************************/
