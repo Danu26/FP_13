@@ -4,77 +4,230 @@
 	<link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <script src="assets/js/jquery-3.3.1.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
 
     <script>
-    	// $(document).ready(function(){
-    	// 	$(".boxsearch").hide();
-
-    	// 	$(".srch").click(function(){
-    	// 		$(".boxsearch").show();
-    	// 	});
-    //   $(document).ready(function(){
-    // $(".dropdown-toggle").dropdown();
-
-    // });
+    	$(document).ready(function(){
+    		$(".box-search").hide();
+        $(".btn-be-search").hide();
 
 
-    	// });   
+    		$(".cari").click(function(){
+    			$(".box-search").show();
+          $(".btn-be-search").show();
+          $(".cari").hide();
+    		    });
+
+        $(".btn-be-search").mouseenter(function(){
+          $(this).css("cursor","pointer");
+         });
+        $(".btn-be-search").click(function(){
+          $(".cari").show();
+          $(this).hide();
+          $(".box-search").hide();
+           });
+
+        $(".cari").mouseenter(function(){
+          $(this).css("cursor","pointer");
+        });
+
+        $(".dropdown").mouseenter(function(){
+          $(".dropdown-menu").show();
+        });
+        $(".dropdown").mouseleave(function(){
+          $(".dropdown-menu").hide();
+        });
+
+    	});   
     </script>
+
 </head>
-<body>
+<!--/.head-->
+<body style="background-color: black;">
+
 <header id="header">
     <nav class="navbar navbar-fixed-top" role="banner">	
-      	<a class="navbar-brand" href="#">
-          <!-- contoh logo -->
-         <img class="logo" src="assets/img/search-icon.png"> 
-        </a>
+      <div class="container">
+        <div class="logo navbar-left">
+        </div>
       	<!--/.logo-->
-       <div class="navbar-left">
+
+        <div class="navbar-left">
           <ul class="nav navbar-nav">
-            <li > <a href="#">Home</a></li>
-            <li > <a href="#">Pc Games</a>
-            <li > <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Console</a>
-            <div class="dropdown-menu">
-            	 <a class="dropdown-item" href="#">Playstation</a><br> 
-            	 <a class="dropdown-item" href="#">Xbox</a><br> 
-            	 <a class="dropdown-item" href="#">Nintendo</a> 
-            	</div>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Pc Games</a>
+            <li  class="dropdown">
+              <a href="#" class="dropdown-toggle"" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" >Console</a>
+                <ul class="dropdown-menu">
+              		<li><a href="#">Playstation</a></li>
+              		<li><a href="#">Xbox</a></li>
+              		<li><a href="#">Nintendo</a></li>
+            	  </ul>
             </li>
             <li><a href="#">Mobile</a></li>
             <li><a href="#">Review</a></li>
             <li><a href="#">Trailer</a></li>
             <li><a href="#">About Us</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#">Contact Us</a></li>
             <li><a href="#">Team</a></li>
-            </ul>
-            <form class="form-inline" action="#">
-          	<input class="boxsearch" type="search" placeholder=" Search.." name="search">
-            <button class="srch"><img class="icari" src="assets/img/search-icon.png"></button>
-            </form>
-        
-        <!--/.Menu-->
-        
-      </div>
-     
-      			
+            <!--/.Menu-->
 
-      <!--/.container-->
+          	<li class="pcari"><a class="cari"><img class="be-cari" src="assets/img/search-icon.png"></a></li>
+          </ul>
+          <div class="btn-be-search">
+            <img class="af-cari" src="assets/img/close-icon.png">
+          </div>
+          <form action="search.html">
+          <div class="box-search">
+            <a><input class="input-search" type="text" name="search" placeholder="Search.."><button  autofocus="true" class="btn-search" type="submit"><img class="icari" src="assets/img/search-icon.png"></button></a>
+          </div></form>
+          <!--/.search--><a href=""></a>
+        <!--/.Menu-->
+      </div>
+      </div>
+    
+      	 <!--/.container-->
     </nav>
     <!--/nav-->
-
   </header>
-<!--/header-->
-	
-	
-
+<!--/header-->	
  <div class="container">
-
   <div class="homepage">
-  		
-  	</div>
+    <div class="row">
+      <div class="col-lg-13 up">
+  		 <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active imgSlide" id="slide">
+        <img src="assets/img/so-1.jpg" alt="Los Angeles" ">
+        <div class="carousel-caption">
+          <h3>Lorem</h3>
+          <p>Lorem Ipsum</p>
+        </div>
+      </div>
+
+      <div class="item imgSlide">
+        <img src="assets/img/asusRog.jpg" alt="Chicago">
+        <div class="carousel-caption">
+          <h3>Lorem</h3>
+          <p>Lorem Ipsum</p>
+        </div>
+      </div>
+    
+      <div class="item imgSlide">
+        <img src="assets/img/wwtank.jpg" alt="New York" class="img-slide" >
+        <div class="carousel-caption">
+          <h3>Lorem</h3>
+          <p>Lorem Ipsum</p>
+        </div>
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
-<!--/homepage-->
+  </div>
+
+    <div class="col-lg-4"><br>
+
+      <div class="sidebox-gamerelese">
+        <div class="sidebar-gamerelese">
+        <p class="sidebar-title">Game Relese Date</p> 
+        </div>
+        <ul class="gamerelese">
+          
+        </ul>
+      </div>
+      <br>
+      <div class="sidebox-populararticles">
+        <div class="sidebar-populararticles">
+        <p class="sidebar-title">Game Relese Date</p>
+        </div>
+    </div>
+  </div>
+<!--/Left-->
+
+  <div class="col-lg-8">
+    <div class="container-fluid">
+      <div class="row news">
+        <div class="col-md-3">
+          <br>
+          <div class="con-news">dffsa</div>
+        </div>
+        <div class="col-md-3">
+          <br>
+          <div class="con-news">dffsa</div>
+        </div>
+        <div class="col-md-3">
+        <br>
+          <div class="con-news">dffsa</div>
+        </div>
+      </div>
+
+      <div class="row news">
+        <div class="col-md-3">
+          <br>
+          <div class="con-news">dffsa</div>
+        </div>
+        <div class="col-md-3">
+          <br>
+          <div class="con-news">dffsa</div>
+        </div>
+        <div class="col-md-3">
+        <br>
+          <div class="con-news">dffsa</div>
+        </div>
+      </div>
+
+      <div class="row news">
+        <div class="col-md-3">
+          <br>
+          <div class="con-news">dffsa</div>
+        </div>
+        <div class="col-md-3">
+          <br>
+          <div class="con-news">dffsa</div>
+        </div>
+        <div class="col-md-3">
+        <br>
+          <div class="con-news">dffsa</div>
+        </div>
+      </div>
+
+      </div>
+    </div>
+    
+    
+    
+
+  </div>
+<!--/Right-->
 </div>
+</div>
+  	</div>
+<!--/homepage-->
+
+</div>
+<!--/Container-->
+<p></p>
 </body>
 </html>

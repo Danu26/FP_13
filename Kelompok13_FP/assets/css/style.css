@@ -1,67 +1,153 @@
+/*********Body*********/
+.body{
+  background-color: blue;
+}
+/*******Header********/
+.logo{
+  height: 50px;
+  width: 90px;
+  background-color: blue;
+  margin-right: 10px;
+}
 
-
-/*************************
-*******Header******
-**************************/
 .navbar {
   background: red;
   font-family: arial black;
+  position: relative;
 }
 
-.navbar-fixed-top .navbar-nav > .active > a,{
-  background-color: blue;
-  color: black;
-}
-/*********Search*****************/
-.srch{
+/*********Search********/
+
+.box-search{
+  width: 250px;
+  height: 51px;
+  background-color: red;
+  font-size: 15px;
+  padding-left: 150px;
   position: absolute;
-  background-color: #fff;
-  margin-left: 60px;
-  height: 30px;
-  width: 30px;
-  margin-top: 10px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  
+  float: left;
+  right: 273px;
 }
-.boxsearch{
+.input-search{
+  width: 180px;
+  height: 42px;
   position: absolute;
-  margin-left: 90px;
-  width: 150px;
-  height: 30px;
-  margin-top: 10px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border : none;
-  font-family: arial;
+  right: 65px;
+  top: 5px;
+ 
+}
+.btn-search{
+  height: 42px;
+  width: 55px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
 }
 .pcari{
-  width: 30px;
-  height: 30px;
+  padding-left: 182px;
 }
-.btncari{
-  height: 30px;
-  width: 30px;
+.se-cari{
+  position: absolute;
+  top: 20px;
 }
-.icari{
+.be-cari{
   height: 20px;
   width: 20px;
-  margin-left: -2px;
 }
-.logo{
-  height: 40px;
-  width: 40px;
-  background-color: transparent;
-  margin-top: -10px;
-  margin-left: 100px;
+.af-cari{
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+.icari{
+  height: 25px;
+  width: 25px;
 }
 
-/*************************
-*******Homepage******
-**************************/
+.btn-be-search{
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  position: absolute;
+  right: 223px;
+}
+.btn-be-search:hover {
+  background-color: white
+}
+
+/*******Homepage******/
+
 .homepage{
   margin-top: 70px;
   margin-bottom: 15px; 
-  height: 1200px;
-  background-color: grey;
+  height: 1450px;
+  background-color: transparent;
+}
+/*******Top******/
+.col-lg-13{
+  background:transparent;
+}
+/*******SlideShow******/
+.imgSlide{
+  height:350px; 
+  width: 100%;
+}
+
+/*******Left******/
+.col-lg-4{
+  background-color: yellow;
+  height: 1100px;
+  position: absolute;
+}
+.sidebox-gamerelese{
+  height: 350px;
+  width:100%;
+  background-color: blue
+}
+.sidebar-gamerelese{
+  height: 40px;
+  background-color: red;
+
+}
+.sidebar-title{
+  font-size: 15px;
+  text-align: center;
+  font-family: arial black;
+  padding-top: 5px;
+}
+ 
+.sidebox-populararticles{
+  height: 350px;
+  width:100%;
+  background-color: blue
+}
+.sidebar-populararticles{
+  height: 40px;
+  background-color: red;
+
+}
+
+/*******Right******/
+.col-lg-8{
+  background-color: red;
+  height: 1100px;
+  padding-right: -40px; 
+
+}
+.col-md-3{
+  background-color: transparent;
+  height: 360px;
+  
+}
+.news{
+  width: 1000px;
+
+}
+
+.con-news{
+  width: 220px;
+  height: 330px;
+  background-color: blue;
 }
