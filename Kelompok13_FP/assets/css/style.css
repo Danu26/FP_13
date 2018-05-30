@@ -11,7 +11,9 @@
 }
 
 .navbar {
-  background: red;
+  /*#00b300
+    #ff9900*/
+  background: #3d3d29;
   font-family: arial black;
   position: relative;
 }
@@ -32,16 +34,38 @@
   width: 180px;
   height: 42px;
   position: absolute;
+<<<<<<< Updated upstream
   right: 65px;
   top: 5px;
  
+=======
+  background-color: #fff;
+  margin-left: 70px;
+  height: 30px;
+  width: 30px;
+  margin-top: 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  
+>>>>>>> Stashed changes
 }
 .btn-search{
   height: 42px;
   width: 55px;
   position: absolute;
+<<<<<<< Updated upstream
   right: 5px;
   top: 5px;
+=======
+  margin-left: 100px;
+  width: 150px;
+  height: 30px;
+  margin-top: 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border : none;
+  font-family: arial;
+>>>>>>> Stashed changes
 }
 .pcari{
   padding-left: 182px;
@@ -54,6 +78,7 @@
   height: 20px;
   width: 20px;
 }
+<<<<<<< Updated upstream
 .af-cari{
   height: 25px;
   width: 25px;
@@ -75,6 +100,13 @@
 }
 .btn-be-search:hover {
   background-color: white
+=======
+.logo{
+  height: 45px;
+  width: 50px;
+  background-color: transparent;
+  margin-top: -12px;
+>>>>>>> Stashed changes
 }
 
 /*******Homepage******/

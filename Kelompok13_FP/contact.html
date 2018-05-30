@@ -2,10 +2,21 @@
 <html>
 <head>
   <title>Contact Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <script src="assets/js/jquery-3.3.1.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/angular/angular.min.js"></script>
+
+    <script>
+
+      var app = angular.module('app', []);
+      app.controller('validateCtrl', function($scope) {
+          $scope.name = '';
+          $scope.email = '';
+      });
+    </script>
 
     <style type="text/css">
       body{
@@ -17,10 +28,10 @@
       .follow{
         float: left;
       }
-      .container{
+      .main{
         background-color: white;
         margin-top: 70px;
-        height: 600px;
+        height: 800px;
       }
       .txt{
         width: 600px;
@@ -36,9 +47,15 @@
         margin-top: 30px;
         margin-left: 80px;
       }
+      .ipt2{
+        height: 40px;
+        width: 600px;
+        margin-top: 40px;
+        margin-left: 80px;
+      }
       .twt{
-        height: 60px;
-        width: 60px;
+        height: 50px;
+        width: 50px;
         margin-left: 55px;
         margin-top: 20px;
         float: left;
@@ -58,8 +75,8 @@
         text-decoration: none;
       }
       .fb{
-        height: 90px;
-        width: 90px;
+        height: 80px;
+        width: 80px;
         margin-right: 38px;
         margin-left: 39px;
         margin-top: 15px;
@@ -69,7 +86,6 @@
       .fb1{
         height: 50px;
         width: 50px;
-        margin-right: 50px;
         margin-top: 40px;
         color: black;
         text-decoration: none;
@@ -80,36 +96,39 @@
         text-decoration: none;
       }
       .ggl{
-        height: 60px;
-        width: 60px;
-        margin-top: 30px;
-        margin-left: 55px;
+        height: 50px;
+        width: 50px;
+        margin-right: 100px;
+        margin-left: 53px;
+        margin-top: 20px;
         float: left;
       }
       .ggl1{
         height: 50px;
         width: 50px;
-        margin-left: 51px;
-        margin-top: 40px;
         color: black;
-        text-decoration: none;
         font-size: 30px;
-        float: left; 
+        margin-top: 30px;
+        margin-left: -47px;
+        left: 50px;
+        float: left;
       }
       .ggl1:hover{
         text-decoration: none;
       }
       .send{
-        margin-top: 10px;
+        margin-top: 15px;
         margin-left: 300px;
+        margin-bottom: 30px;
       }
     </style>
 </head>
-<body>
+<body ng-app="app">
 <header id="header">
     <nav class="navbar navbar-fixed-top" role="banner"> 
+      <div class="container">
         <a class="navbar-brand" href="index.html">
-         <img class="logo" src="assets/img/search-icon.png"> 
+         <img class="logo" src="assets/img/logo.png"> 
         </a>
         <!--/.logo-->
        <div class="navbar-left">
@@ -131,10 +150,10 @@
             <li><a href="#">Team</a></li>
             </ul>
             <form class="form-inline" action="#">
-            <input class="boxsearch" type="search" placeholder=" Search.." name="search">
+            <input class="boxsearch" type="search" placeholder=" Search.." name="search" autofocus="true"> 
             <button class="srch"><img class="icari" src="assets/img/search-icon.png"></button>
             </form>
-        
+        </div>
         <!--/.Menu-->
         
       </div>
@@ -150,16 +169,25 @@
   
   
 
-<div class="container">
+<div class="container main">
   <div class="cont">
     <h2>Contact Us</h2>
-    <form>
-      <input type="text" name="name" class="form-control ipt" placeholder="Enter name">
-      <input type="email" name="email" class="form-control ipt" placeholder="Enter email">
-      <input type="text" name="subject" class="form-control ipt" placeholder="Enter subject">
+    <form ng-app ="" ng-controller="validateCtrl" name="myform" novalidate>
+      <input type="text" name="name" ng-model="name" class="form-control ipt" placeholder="Enter name" required>
+      <span style="color:red; margin-left: 90px;" ng-show="myform.name.$dirty && myform.name.$invalid">
+      <span ng-show="myform.name.$error.required">Name is required.</span>
+      </span>
+      <input type="email" name="email" ng-model="input" class="form-control ipt2" placeholder="Enter email" required>
+      <span style="color:red; margin-left: 90px;" ng-show="myform.email.$dirty && myform.email.$invalid">
+      <span ng-show="myform.email.$error.required">Email is required.</span>
+      <span ng-show="myform.email.$error.email">Invalid email address.</span>
+      </span>
+      <input type="text" name="subject" class="form-control ipt2" placeholder="Enter subject">
       <textarea name="your-massage" class="form-control txt" placeholder="Enter your massage" aria-invalid="false" cols="40" rows="10">Enter Your Message
       </textarea>
-      <button class="send">Send Message</button>
+      <input class="send" type="submit" value="Send Your Message" 
+      ng-disabled="myform.name.$dirty && myform.name.$invalid ||  
+      myform.email.$dirty && myform.email.$invalid">
     </form>
   </div>
   <div class="follow">
@@ -169,7 +197,7 @@
     </div><br>
     <div>
     <img class="fb" src="assets/img/facebook.png"><a class="fb1" href="#">Facebook</a>
-    </div><br>
+    </div>
     <div>
       <img class="ggl" src="assets/img/google.png"><a class="ggl1" href="#">Google+</a>
     </div>
