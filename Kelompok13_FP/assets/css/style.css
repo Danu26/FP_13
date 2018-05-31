@@ -1,76 +1,185 @@
 /*********Body*********/
-.body{
+body{
   background-color: blue;
 }
 /*******Header********/
+.logo{
+  height: 50px;
+  width: 39px;
+  background-color: blue;
 
+}
 .navbar {
-  /*#00b300
-    #ff9900
-    #3d3d29*/
-  background: #00b300;
-  font-family: arial black;
-  position: relative;
-  color: black;
+  background: blue;
+  height: 7%;
+}
+.navbar-nav{
+  padding-top: 2px;
+  font-family: arial;
+
+  font-size: 11px;
+}
+.navbar-left{
+  width: 15%;
 }
 
 /*********Search********/
 
-.boxsearch{
-  height: 25px;
-  width: 130px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  margin-top: 10px;
-  margin-left: -170px;
-  position: absolute;
-  font-family: arial;
+.box-search{
+  width: 140%;
+  height: 55px;
+  font-size: 15px;
+  margin-top: 2px;
+}
+.input-search{
+  width: 180px;
+  height: 42px;
+
+ 
+}
+.btn-search{
+  height: 48px;
+  width: 55px;
+  margin-left: 5px;
+
 
 }
-
 .pcari{
-  margin-left: 216px;
-  height: 50px;
-}
-.se-cari{
-  position: absolute;
-  top: 20px;
+  height: 52px;
+  width: 130%;
+  padding-top: 15px;
+  padding-left: 25px;
 }
 .be-cari{
   height: 20px;
   width: 20px;
+  margin-left: 10px;
 }
-
 .af-cari{
-  height: 20px;
-  width: 20px;
-  margin-top: 15px;
-  margin-left: 14px;
+  height: 22px;
+  width: 22px;
+  margin-top: 10px;
+  margin-left: 10px;
+
+  top: 15px;
 }
 .icari{
   height: 20px;
   width: 20px;
 }
 
-.srch{
-  height: 25px;
-  position: absolute;
-  margin-left: -38px;
-  margin-top: 10px;
-  border: none;
-}
 .btn-be-search{
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  margin-left: 1089px; 
+  height: 52px;
+  width: 55px;
+
+  
+
+
 }
 .btn-be-search:hover {
   background-color: white
 }
-.logo{
+
+/*******Homepage******/
+
+.homepage{
+  padding-top: 70px;
+  margin-bottom: 20px; 
+  height: 1450px;
+  background-color: orange;
+}
+/*******Top******/
+
+/*******SlideShow******/
+.imgSlide{
+  height:350px; 
+  width: 100%;
+}
+
+.slide-content{
+  height: 30%;
+  margin-left: -15%;
+  margin-right: -15%;
+  margin-bottom: -2%;
+  background-color: black;  
+  opacity: 0.9;
+}
+
+/*******Left******/
+
+.sidebox-gamerelese{
+  height: 350px;
+  width:100%;
+  background-color: blue
+}
+.sidebar-gamerelese{
+  height: 40px;
+  margin-top: 10px;
+  background-color: red;
+
+}
+.sidebar-title{
+  font-size: 15px;
+  text-align: center;
+  font-family: arial black;
+  padding-top: 5px;
+}
+ 
+.sidebox-populararticles{
+  height: 350px;
+  width:100%;
+  background-color: blue
+}
+.sidebar-populararticles{
+  height: 40px;
+  background-color: red;
+
+}
+
+/*******Right******/
+
+.heading{
+  width: 100%;
   height: 45px;
-  width: 50px;
-  background-color: transparent;
-  margin-top: -12px;
+  margin-top: 10px;
+  padding-left: 20px;
+  background-color: grey;
+}
+
+
+.grid-news{
+  padding-left: 2px;  
+  border-radius: 5px;
+}
+
+.news{
+  background-color: red;
+  width: 100%;
+}
+.image-news{
+  height: 100%;
+  width: 100%;
+}
+.news-title{
+  text-align: center;
+  font-family: arial;
+}
+.news-content{
+  font-family: calibri;
+  font-size: 12px;
+}
+.read-more{
+  height: 5%;
+  text-align: right;
+  font-family: arial black;
+  font-size: 12px;
+  background-color: blue;
+  height: 50%;
+}
+.page-number{
+   width: 100%;
+  height: 45px;
+  margin-top: 10px;
+  padding-left: 20px;
+  background-color: grey;
 }
