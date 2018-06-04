@@ -7,10 +7,14 @@
 	  <link href="assets/css/header.css" rel="stylesheet">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="assets/js/angular/angular.min.js"></script>
 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-
-
+    <script>
+      var app= angular.module('jam', []);
+      app.controller('datctrl', function($scope) {
+        $scope.today = new Date();
+      });
+    </script>
 
     <script>
       $(document).ready(function(){
@@ -69,6 +73,10 @@
       h1, p{
         color: white;
       }
+      .jam{
+        margin-top: -50px;
+        margin-left: 900px;
+      }
     </style>
 </head>
 <!--/.head-->
@@ -82,7 +90,7 @@
           <!-- contoh logo -->
             <img class="logo" src="assets/img/logo.png"> 
             </a>
-            <li class="active"><a class="nav-link" href="index.html">Home</a></li>
+            <li class=""><a class="nav-link" href="index.html">Home</a></li>
             <li><a class="nav-link" href="pcgame.html">Pc Games</a>
             <li  class="dropdown">
               <a class="nav-link" href="#" class="dropdown-toggle"" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" >Console</a>
@@ -93,11 +101,11 @@
                 </ul>
             </li>
             <li><a class="nav-link" href="mobile.html">Mobile</a></li>
-            <li><a class="nav-link" href="#">Review</a></li>
-            <li><a class="nav-link" href="#">Trailer</a></li>
-            <li><a class="nav-link" href="#">About Us</a></li>
+            <li><a class="nav-link" href="review.html">Review</a></li>
+            <li><a class="nav-link" href="trailer.html">Trailer</a></li>
+            <li><a class="nav-link" href="aboutus.html">About Us</a></li>
             <li><a class="nav-link" href="contact.html">Contact Us</a></li>
-            <li><a class="nav-link" href="#">Team</a></li>
+            <li><a class="nav-link" href="team.html">Team</a></li>
             <!--/.Menu-->
 
             <li class="pcari"><a class="cari"><img class="be-cari" src="assets/img/search-icon.png"></a></li>
@@ -109,10 +117,6 @@
             <input class="boxsearch" type="search" placeholder=" Search.." name="search">
             <button class="srch"><img class="icari" src="assets/img/search-icon.png"></button>
             </form>
-          <!-- <form action="search.html">
-          <div class="box-search">
-            <a><input class="input-search" type="text" name="search" placeholder="Search.."><button  autofocus="true" class="btn-search" type="submit"><img class="icari" src="assets/img/search-icon.png"></button></a>
-          </div></form> -->
           <!--/.search-->
         <!--/.Menu-->
       </div>
@@ -128,6 +132,10 @@
 <div class="container main">
   <div style="margin-bottom: 20px; margin-left: 20px;">
     <h1>Search</h1>
+    <div ng-app="jam" ng-controller="datctrl">
+      <p class="jam">{{ today | date : "'Today is ' MMM d, y"}}</p>
+    </div>
+    <br>
   <input type="search" name="search">
   <button>Search</button>
   </div>

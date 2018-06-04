@@ -16,7 +16,7 @@
   .navbar-nav{
     padding-top: 2px;
     font-family: arial black;
-    font-size: 13px;
+    font-size: 14px;
   }
   .active{
   z-index: 1;
@@ -37,14 +37,17 @@
   }
   .input-search{
     width: 170px;
-    height: 42px;
+    height: 30px;
+    margin-top: 10px;
 
    
   }
   .btn-search{
-    height: 48px;
-    width: 55px;
-    margin-left: 5px;
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    margin-left: 3px;
+    margin-top: 10px;
 
 
   }
@@ -70,6 +73,8 @@
   .icari{
     height: 20px;
     width: 20px;
+    margin-left: -5px;
+    margin-top: -5px;
   }
 
   .btn-be-search{

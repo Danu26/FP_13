@@ -6,7 +6,20 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <script src="assets/js/jquery-3.3.1.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/angular/angular.min.js"></script>
 
+
+    <script>
+      var app = angular.module('mycomment', []); 
+      app.controller('myctrl', function($scope) {
+          $scope.x = [""];
+          $scope.nama = [""];
+          $scope.addItem = function () {
+          $scope.x.push($scope.addMe);
+          $scope.nama.push($scope.addNama);
+    }   
+    });
+    </script>
     <script>
       $(document).ready(function(){
         $(".boxsearch").hide();
@@ -52,7 +65,7 @@
     <style type="text/css">
     .main{
       background-color: #2d2c2c;
-      height: 1000px;
+      height: auto;
       margin-top: 30px;
       display: flex;
     }
@@ -94,6 +107,11 @@
       margin-left: 20px;
       margin-right: 20px;
     }
+    h1 {
+      background-color: #2d2c2c;
+      width: 100%;
+      color: white;
+    }
     ul{
       margin-left: -10px;
     }
@@ -123,9 +141,34 @@
       box-shadow: 0;
       display: inline;
     }
+    .commnent{
+      margin-left: 20px;
+      width: 200px;
+    }
+    .txt{
+      border: 1px solid black;
+      margin-left: 20px;
+      width: 500px;
+    }
+    .cmipt{
+      margin-left: 20px;
+      margin-top: 3px;
+    }
+    .isi{
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+    .nama{
+      border: 1px solid black; 
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+    .cmt{
+      margin-left: 10px;
+    }
     </style>
 </head>
-<body>
+<body >
 <header id="header">
     <nav class="navbar fixed-top" role="banner">  
       <div class="container">
@@ -135,7 +178,7 @@
           <!-- contoh logo -->
             <img class="logo" src="assets/img/logo.png"> 
             </a>
-            <li class="active"><a class="nav-link" href="index.html">Home</a></li>
+            <li class=""><a class="nav-link" href="index.html">Home</a></li>
             <li><a class="nav-link" href="pcgame.html">Pc Games</a>
             <li  class="dropdown">
               <a class="nav-link" href="#" class="dropdown-toggle"" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" >Console</a>
@@ -146,9 +189,9 @@
                 </ul>
             </li>
             <li><a class="nav-link" href="mobile.html">Mobile</a></li>
-            <li><a class="nav-link" href="#">Review</a></li>
-            <li><a class="nav-link" href="#">Trailer</a></li>
-            <li><a class="nav-link" href="#">About Us</a></li>
+            <li><a class="nav-link" href="review.html">Review</a></li>
+            <li><a class="nav-link" href="trailer.html">Trailer</a></li>
+            <li><a class="nav-link" href="aboutus.html">About Us</a></li>
             <li><a class="nav-link" href="contact.html">Contact Us</a></li>
             <li><a class="nav-link" href="team.html">Team</a></li>
             <!--/.Menu-->
@@ -162,10 +205,6 @@
             <input class="boxsearch" type="search" placeholder=" Search.." name="search">
             <button class="srch"><img class="icari" src="assets/img/search-icon.png"></button>
             </form>
-          <!-- <form action="search.html">
-          <div class="box-search">
-            <a><input class="input-search" type="text" name="search" placeholder="Search.."><button  autofocus="true" class="btn-search" type="submit"><img class="icari" src="assets/img/search-icon.png"></button></a>
-          </div></form> -->
           <!--/.search-->
         <!--/.Menu-->
       </div>
@@ -182,15 +221,15 @@
       <fieldset class="release">
         <legend>Game Release Date</legend>
         <ul>
-          <li><span><a class="list" href="#">God of War Terbaru telah rilis</a></span></li>
+          <li><span><a class="list" href="news.html">God of War Terbaru telah rilis</a></span></li>
           <hr>
-          <li><span><a class="list" href="#">God of War Terbaru telah rilis</a></span></li>
+          <li><span><a class="list" href="news.html">God of War Terbaru telah rilis</a></span></li>
           <hr>
-          <li><span><a class="list" href="#">God of War Terbaru telah rilis</a></span></li>
+          <li><span><a class="list" href="news.html">God of War Terbaru telah rilis</a></span></li>
           <hr>
-          <li><span><a class="list" href="#">God of War Terbaru telah rilis</a></span></li>
+          <li><span><a class="list" href="news.html">God of War Terbaru telah rilis</a></span></li>
           <hr>
-          <li><span><a class="list" href="#">God of War Terbaru telah rilis</a></span></li>
+          <li><span><a class="list" href="news.html">God of War Terbaru telah rilis</a></span></li>
           <hr>
         </ul>
       </fieldset>
@@ -198,15 +237,15 @@
        <fieldset class="popular">
         <legend>Popular Articles</legend>
         <ul>
-          <li><span><a class="list" href="#">God of War Terbaru telah rilis</a></span></li>
+          <li><span><a class="list" href="news.html">God of War Terbaru telah rilis</a></span></li>
           <hr>
-          <li><span><a class="list" href="#">God of War Terbaru telah rilis</a></span></li>
+          <li><span><a class="list" href="news.html">God of War Terbaru telah rilis</a></span></li>
           <hr>
-          <li><span><a class="list" href="#">God of War Terbaru telah rilis</a></span></li>
+          <li><span><a class="list" href="news.html">God of War Terbaru telah rilis</a></span></li>
           <hr>
-          <li><span><a class="list" href="#">God of War Terbaru telah rilis</a></span></li>
+          <li><span><a class="list" href="news.html">God of War Terbaru telah rilis</a></span></li>
           <hr>
-          <li><span><a class="list" href="#">God of War Terbaru telah rilis</a></span></li>
+          <li><span><a class="list" href="news.html">God of War Terbaru telah rilis</a></span></li>
           <hr>
         </ul>
       </fieldset>
@@ -251,7 +290,19 @@
         <img src="assets/img/btwitter.png" alt="Twitter" />
     </a>
     
-
+    <h1>Comments</h1>
+    <form  ng-app="mycomment" ng-controller="myctrl" class="comment">
+    <input class="nama" ng-model="addNama" type="text" name="name" placeholder="   Nama..."> 
+    <textarea ng-model="addMe" name="comment" class="form-control txt" placeholder="Enter your commnet..." cols="10" rows="5">
+      </textarea>
+      <input class="cmipt" type="submit" ng-click="addItem()" value="Comment">
+      <hr style="height: 5px; color: black;">
+      <div class="isi">
+      <h4 ng-repeat="nama in nama">{{nama}}</h4>
+      <p class="cmt" ng-repeat="x in x">{{x}}</p>
+    </div>
+    </form>
+    
 </div>
   </div>
 </div>
